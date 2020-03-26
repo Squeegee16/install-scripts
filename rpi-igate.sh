@@ -1,10 +1,10 @@
 #! /bin/sh
 # https://www.youtube.com/watch?v=g_AoAGjQMl8&feature=youtu.be
 sudo apt-get update -y
-sudo apt-get install git
+sudo apt-get install git -y
 
 ## python-misc
-sudo apt-get install python3-dev cmake build-essential python-pip libusb-1.0-0-dev
+sudo apt-get install python3-dev cmake build-essential python-pip libusb-1.0-0-dev -y
 
 ## RTl-SDR
 echo 'blacklist dvb_usb_rtl28xxu' >no-rtl.conf
