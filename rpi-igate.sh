@@ -1,4 +1,4 @@
-#! /bin
+#! /bin/sh
 # https://www.youtube.com/watch?v=g_AoAGjQMl8&feature=youtu.be
 sudo apt-get update -y
 sudo apt-get install git
