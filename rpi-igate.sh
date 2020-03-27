@@ -23,19 +23,3 @@ sudo make install
 sudo ldconfig
 cd ~
 sudo cp rtl-sdr/rtl-sdr.rules /etc/udev/rules.d/
-
-## direwolf
-sudo apt-get remove --purge pulseaudio
-sudo apt-get autoremove
-rm -rf ~/.pulse
-sudo reboot
-sudo apt-get install libasound2-dev -y
-cd ~
-git clone https://www.github.com/wb2osz/direwolf
-cd direwolf
-make
-sudo make install
-make install-conf
-make install-rpi
-
-echo 'complete'
