@@ -61,7 +61,7 @@ git clone https://github.com/cjcliffe/CubicSDR.git
 cd CubicSDR
 mkdir build
 cd build
-cmake ../ -DCMAKE_BUILD_TYPE=Release -DwxWidgets_CONFIG_EXECUTABLE=~/Develop/wxWidgets-staticlib/bin/wx-config -DUSE_HAMLIB=1
+cmake ../ -DCMAKE_BUILD_TYPE=Release -DwxWidgets_CONFIG_EXECUTABLE=~/applications/cubic/wxWidgets-3.1.3/wxWidgets-staticlib/bin/wx-config -DUSE_HAMLIB=1
 make
 sudo make install
 cd ~/applications
