@@ -52,7 +52,7 @@ rm wxWidgets-3.1.3.tar.bz2
 cd wxWidgets-3.1.3/
 mkdir -p wxWidgets-staticlib/
 ./autogen.sh
-/configure --with-opengl --disable-shared --enable-monolithic --with-libjpeg --with-libtiff --with-libpng --with-zlib --disable-sdltest --enable-unicode --enable-display --enable-propgrid --disable-webkit --disable-webview --disable-webviewwebkit --prefix=`echo ~/Develop/wxWidgets-staticlib` CXXFLAGS="-std=c++0x"
+/configure --with-opengl --disable-shared --enable-monolithic --with-libjpeg --with-libtiff --with-libpng --with-zlib --disable-sdltest --enable-unicode --enable-display --enable-propgrid --disable-webkit --disable-webview --disable-webviewwebkit --prefix=`echo ~/applications/cubic/wxWidgets-staticlib` CXXFLAGS="-std=c++0x"
 make -j4 && sudo make install
 cd ~/applications/cubic
 ##cubic SDR
