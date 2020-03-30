@@ -1,5 +1,5 @@
 cd ~
-mkdir applications applications/cubicsdr
+mkdir applications applications/cubic
 cd applications/cubic
 
 sudo apt-get install cmake automake -y
