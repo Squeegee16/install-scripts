@@ -8,7 +8,7 @@ sudo apt-get install libpulse-dev libgtk-3-dev -y
 echo "getting SoapySDR"
 git clone https://github.com/pothosware/SoapySDR.git
 cd SoapySDR
-sudo mkdir build
+mkdir build
 cd build
 cmake ../ -DCMAKE_BUILD_TYPE=Release
 make -j4
