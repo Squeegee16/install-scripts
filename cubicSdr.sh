@@ -2,7 +2,7 @@ cd ~
 mkdir applications applications/cubic
 cd applications/cubic
 
-sudo apt-get install cmake automake -y
+sudo apt-get install cmake automake build-essential -y
 sudo apt-get install libpulse-dev libgtk-3-dev -y
 ###soapy-sdr
 echo "getting SoapySDR"
