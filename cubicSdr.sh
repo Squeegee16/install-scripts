@@ -1,5 +1,11 @@
+#! /bin/sh
 cd ~
-mkdir applications applications/cubic
+if[ ! -d ~/applications]
+then 
+  mkdir applications 
+else
+  mkdir applications/cubic
+fi
 cd applications/cubic
 
 sudo apt-get install cmake automake build-essential -y
