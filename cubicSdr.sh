@@ -2,10 +2,10 @@
 cd ~
 if [ ! -d "~/applications" ]
 then
-  mkdir applications && echo "making app folders"
-  mkdir applications/cubic 
+	mkdir applications && echo "making app folders"
+	mkdir applications/cubic
 else
-  mkdir applications/cubic && echo "making app app folder"
+	mkdir applications/cubic && echo "making app folder"
 fi
 cd applications/cubic
 
@@ -15,24 +15,35 @@ sudo apt-get install libpulse-dev libgtk-3-dev -y
 echo "getting SoapySDR"
 git clone https://github.com/pothosware/SoapySDR.git
 cd SoapySDR
+mkdir build
 cd build
 cmake ../ -DCMAKE_BUILD_TYPE=Release
 make -j4
 sudo make install
 sudo ldconfig
 SoapySDRUtil --info
-cd ..
-cd ..
+cd ~/applications/cubic
 ###liquid dsp
 echo "getting liquid dsp"
 git clone https://github.com/jgaeddert/liquid-dsp.git
 cd liquid-dsp
 ./bootstrap.sh
-CFLAGS="-march=native -O3" ./configure --enable-fftoverride 
+CFLAGS="-march=native -O3" ./configure --enable-fftoverride
 make -j4
 sudo make install
 sudo ldconfig
-cd ..
+cd ~/applications/cubic
+### soapy sdr
+sudo apt-get install librtlsdr-dev -y
+git clone https://github.com/pothosware/SoapyRTLSDR.git
+cd SoapyRTLSDR
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make
+sudo make install
+sudo ldconfig
+cd ~/applications/cubic
 ###wxwidgets
 echo "getting wxWidgets"
 wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.3/wxWidgets-3.1.3.tar.bz2
