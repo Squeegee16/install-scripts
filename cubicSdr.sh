@@ -2,7 +2,8 @@
 cd ~
 if [ ! -d "~/applications" ]
 then
-  mkdir applications && echo "making root app folder"
+  mkdir applications && echo "making app folders"
+  mkdir applications/cubic 
 else
   mkdir applications/cubic && echo "making app app folder"
 fi
