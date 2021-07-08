@@ -52,7 +52,7 @@ rm wxWidgets-3.1.3.tar.bz2
 cd wxWidgets-3.1.3/
 mkdir -p wxWidgets-staticlib/
 ./autogen.sh
-./configure --with-opengl --disable-shared --enable-monolithic --with-libjpeg --with-libtiff --with-libpng --with-zlib --disable-sdltest --enable-unicode --enable-display --enable-propgrid --disable-webkit --disable-webview --disable-webviewwebkit --prefix=`/home/zercon/applications/cubic/wxWidgets-3.1.3/wxWidgets-staticlib` CXXFLAGS="-std=c++0x"
+./configure --with-opengl --disable-shared --enable-monolithic --with-libjpeg --with-libtiff --with-libpng --with-zlib --disable-sdltest --enable-unicode --enable-display --enable-propgrid --disable-webkit --disable-webview --disable-webviewwebkit --prefix=`/home/markone/applications/cubic/wxWidgets-3.1.3/wxWidgets-staticlib` CXXFLAGS=""
 make -j4 && sudo make install
 cd ~/applications/cubic
 echo "getting HamLib"
@@ -68,7 +68,7 @@ git clone https://github.com/cjcliffe/CubicSDR.git
 cd CubicSDR
 mkdir build
 cd build
-cmake ../ -DCMAKE_BUILD_TYPE=Release -DwxWidgets_CONFIG_EXECUTABLE='home/zercon/applications/cubic/wxWidgets-3.1.3/wxWidgets-staticlib/bin/wx-config -DUSE_HAMLIB=1
+cmake ../ -DCMAKE_BUILD_TYPE=Release -DwxWidgets_CONFIG_EXECUTABLE='/home/markone/applications/cubic/wxWidgets-3.1.3/wxWidgets-staticlib/bin/wx-config -DUSE_HAMLIB=1
 make
 sudo make install
 cd ~/applications
